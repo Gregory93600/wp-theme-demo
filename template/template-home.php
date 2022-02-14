@@ -15,7 +15,7 @@ $args = array(
 );
 */
 
-$args = array( 'category_not_in' => 1 
+$args = array( 'category__not_in' => 1 
 );
 $query = new WP_Query($args);
 
@@ -52,15 +52,8 @@ $query = new WP_Query($args);
             </section>
 
             <section class="quart sidebar">
-                <article>
-                    <h3>Sidebar</h3>
-                    <div class="widget-container">
-                        <!-- widget -->
-                    </div>
-                    <div class="widget-container">
-                       <!-- widget -->
-                    </div>
-                </article>
+                <?php get_sidebar(  ); ?>
+                
             </section>
         </div>
 <?php get_footer( ); ?>
