@@ -118,3 +118,60 @@ add_action(
 		remove_action( 'template_redirect', 'rest_output_link_header', 11 );
 	}
 );
+
+
+add_action(
+	'admin_menu',
+	function () {
+		// Remove Dashboard
+		remove_menu_page( 'index.php' );
+		// Remove Dashboard -> Update Core notice
+		remove_submenu_page( 'index.php', 'update-core.php' );
+
+		
+
+		// Remove Comments
+		remove_menu_page( 'edit-comments.php' );
+
+		// Remove Appearance
+		remove_menu_page( 'themes.php' );
+		// Remove Appearance -> Themes
+		remove_submenu_page( 'themes.php', 'themes.php' );
+		// Remove Appearance -> Customize
+		remove_submenu_page( 'themes.php', 'customize.php?return=' . urlencode( $_SERVER['REQUEST_URI'] ) );
+
+	
+		// Remove Plugins
+		remove_menu_page( 'plugins.php' );
+		// Remove Plugins -> Installed plugins
+		remove_submenu_page( 'plugins.php', 'plugins.php' );
+		// Remove Plugins -> Add new plugins
+		remove_submenu_page( 'plugins.php', 'plugin-install.php' );
+		// Remove Plugins -> Plugin editor
+		remove_submenu_page( 'plugins.php', 'plugin-editor.php' );
+
+
+		// Remove Tools
+		remove_menu_page( 'tools.php' );
+		// Remove Tools -> Available Tools
+		remove_submenu_page( 'tools.php', 'tools.php' );
+		// Remove Tools -> Import
+		remove_submenu_page( 'tools.php', 'import.php' );
+		// Remove Tools -> Export
+		remove_submenu_page( 'tools.php', 'export.php' );
+
+		// Remove Settings
+		remove_menu_page( 'options-general.php' );
+		// Remove Settings -> Writing
+		remove_submenu_page( 'options-general.php', 'options-writing.php' );
+		// Remove Settings -> Reading
+		remove_submenu_page( 'options-general.php', 'options-reading.php' );
+		// Remove Settings -> Discussion
+		remove_submenu_page( 'options-general.php', 'options-discussion.php' );
+		// Remove Settings -> Media
+		remove_submenu_page( 'options-general.php', 'options-media.php' );
+		// Remove Settings -> Permalinks
+		remove_submenu_page( 'options-general.php', 'options-permalink.php' );
+	},
+	999
+);
