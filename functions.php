@@ -29,6 +29,8 @@ function simplenews_enqueue_style(){
  
      wp_enqueue_script('mainjs', get_template_directory_uri()."/js/main.js");
 
+	 // desactiver les scripts globaux
+	 wp_enqueue_style('global-styles');
 }
 
 
