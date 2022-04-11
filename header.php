@@ -13,11 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    
-
-
-
-<!-- Action hook : Placeholder pour le code de wordpress -->
-
     <?php wp_head();?>
 
 </head>
@@ -28,11 +23,6 @@
 
 <body <?php body_class( ); ?>>
 
-
-
-<!-- hook utilisqble dans functions.php-->
-
-<?php wp_body_open();?>
 
     <header class="v-aligne">
 
