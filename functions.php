@@ -206,3 +206,7 @@ function simplenews_register_entrevue_taxonomies()
 }
 
 add_action( 'init','simplenews_register_entrevue_taxonomies' );
+
+// nettoyage
+
+include('include/clean.php');
