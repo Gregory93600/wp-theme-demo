@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=League+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=League+Gothic&display=swap");
+h1, h2, h3, h4 {
+  font-family: "Anton";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #c77dff;
+  font-family: "League Gothic";
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-color: red;
+  }
+}
+body header {
+  background-color: #e0aaff;
+}
+body header .conteneur {
+  display: flex;
+}
+body header nav {
+  width: 100%;
+}
+body header nav ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+body header nav ul li {
+  padding: 1em;
+}
+body header nav ul li a {
+  background-color: #3c096c;
+  display: block;
+  padding: 1em;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: #9d4edd;
+}
+body header nav ul li a:hover {
+  color: #9d4edd;
+}
+body header nav ul li a:visited {
+  color: #c77dff;
+}
+body header nav ul li a:active {
+  color: #240046;
+}

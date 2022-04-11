@@ -15,7 +15,7 @@ $args = array(
 );
 */
 
-$args = array( 'category__not_in' => 1 
+$args = array( 'category__not_in' => array(1, 35, 34)
 );
 $query = new WP_Query($args);
 
@@ -55,5 +55,8 @@ $query = new WP_Query($args);
                 <?php get_sidebar(  ); ?>
                 
             </section>
+        </div>
+        <div>
+        <?php get_template_part('template/parts/latest-reportages'); ?>
         </div>
 <?php get_footer( ); ?>

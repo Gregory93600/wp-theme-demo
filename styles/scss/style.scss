@@ -1,0 +1,48 @@
+@import "partials/mixins";
+@import "partials/colors";
+@import "partials/fonts";
+@import "partials/titles";
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $second-lightness-color;
+    font-family: $content-font;
+
+    @include small{
+        background-color: red;
+    }
+
+    header{
+
+        background-color:$third-lightness-color ;
+        .conteneur{
+            display: flex;
+        }
+        nav{
+            width: 100%;
+            ul{
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                display: flex;
+               
+                gap: 1em;
+                flex-wrap: wrap;
+                li{
+                    padding: 1em;
+                        a{
+                            background-color: $third-dark-color;
+                            display: block;
+                            padding: 1em;
+                            @include link($first-lightness-color, $second-lightness-color, $first-lightness-color, $second-dark-color);
+                        }
+                    }
+                } 
+        }
+    }
+}
+
+

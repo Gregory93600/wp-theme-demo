@@ -1,0 +1,40 @@
+// fichier utilitaire a reutiliser
+
+@mixin link($normalColor, $hoverColor,$vistedColor,$activeColor,$underlined:false){
+    &{
+        //operattion ternaire (if/else sur une seule ligne)
+        text-decoration: if($underlined, underlined, none);
+        color: $normalColor;
+
+        &:hover{
+            color: $vistedColor;
+        }
+        &:visited{
+            color: $hoverColor;
+        }
+        &:active{
+            color: $activeColor;
+        }
+    }
+}
+    
+// dimension ecran
+$small:500px;
+$medium:1024px;
+$large:1280px;
+
+@mixin small{
+    @media screen and (max-width:$small) {
+        @content;
+    }
+}
+@mixin medium{
+    @media screen and (max-width:$medium) {
+        @content;
+    }
+}
+@mixin large{
+    @media screen and (max-width:$large) {
+        @content;
+    }
+}
